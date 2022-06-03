@@ -26,7 +26,6 @@
 #include <linux/cpumask.h>
 #include <linux/interrupt.h>
 #include <linux/sec_argos.h>
-//#include <linux/ologk.h>
 
 #if defined(CONFIG_SCHED_EMS)
 #include <linux/ems.h>
