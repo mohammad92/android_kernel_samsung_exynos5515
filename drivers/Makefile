@@ -204,9 +204,6 @@ obj-$(CONFIG_SENSORS_SSP)   += sensorhub/
 # Vibrator
 obj-y				+= vibrator/
 
-# OLOG
-obj-y				+= kperfmon/
-
 # uH
 obj-$(CONFIG_UH)        += uh/
 
