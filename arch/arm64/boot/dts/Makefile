@@ -36,6 +36,12 @@ dtbo-y += samsung/exynos5515-wisebl_na_open_02.dtbo
 dtbo-y += samsung/exynos5515-wisebl_na_open_03.dtbo
 dtbo-y += samsung/exynos5515-wisebl_na_open_10.dtbo
 dtbo-y += samsung/exynos5515-wisebl_na_open_11.dtbo
+dtbo-y += samsung/exynos5515-wiseul_na_open_00.dtbo
+dtbo-y += samsung/exynos5515-wiseul_na_open_01.dtbo
+dtbo-y += samsung/exynos5515-wiseul_na_open_02.dtbo
+dtbo-y += samsung/exynos5515-wiseul_na_open_03.dtbo
+dtbo-y += samsung/exynos5515-wiseul_na_open_10.dtbo
+dtbo-y += samsung/exynos5515-wiseul_na_open_11.dtbo
 
 targets += dtbs
 DTB_LIST  := $(dtb-y) $(dtbo-y)
