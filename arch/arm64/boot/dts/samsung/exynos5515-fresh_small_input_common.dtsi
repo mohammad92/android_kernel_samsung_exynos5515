@@ -1,0 +1,19 @@
+/*
+ * SAMSUNG EXYNOS5515 input device tree source
+ *
+ * Copyright (c) 2021 Samsung Electronics Co., Ltd.
+ *		http://www.samsung.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+*/
+
+#include "exynos5515-fresh_input_common.dtsi"
+
+&hsi2c_3 {
+	hideep@6c {
+		hideep,max_coords = <396 396 255 65535>;
+		hideep,firmware_name = "tsp_hideep/ist207wq_fresh_small.bin";
+	};
+};
