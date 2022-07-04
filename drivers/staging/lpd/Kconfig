@@ -1,0 +1,13 @@
+# drivers/staging/lpd/Kconfig
+#
+# Copyright (c) 2010-2011 Samsung Electronics Co., Ltd.
+#		http://www.samsung.com/
+#
+# Licensed under GPLv2
+
+config EXYNOS_LPD
+	tristate "Samsung Exynos Low Power Display"
+	default N
+	help
+	  Enable support for Exynos Low Power Display mode.
+

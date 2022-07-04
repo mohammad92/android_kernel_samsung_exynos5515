@@ -1,0 +1,38 @@
+/*
+ * SAMSUNG EXYNOS5515 sensor device tree source
+ *
+ * Copyright (c) 2021 Samsung Electronics Co., Ltd.
+ *		http://www.samsung.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+*/
+
+&contexthub_0 {
+	chub-irq-pin-len = <4>;
+	chub-irq-pin = <&gpm10 0 0>, <&gpm17 0 0>, <&gpm20 0 0>, <&gpm22 0 0>;
+	/* SSP Sensor Position */
+	ssp,acc-position = <5>;
+	ssp,mag-position = <2>;
+};
+
+&gpm10 {
+	interrupts = <>;
+	status = "disabled";
+};
+
+&gpm17 {
+	interrupts = <>;
+	status = "disabled";
+};
+
+&gpm20 {
+	interrupts = <>;
+	status = "disabled";
+};
+
+&gpm22 {
+	interrupts = <>;
+	status = "disabled";
+};
