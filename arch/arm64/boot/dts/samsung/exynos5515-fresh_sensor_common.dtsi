@@ -1,0 +1,82 @@
+/*
+ * SAMSUNG EXYNOS5515 sensor device tree source
+ *
+ * Copyright (c) 2021 Samsung Electronics Co., Ltd.
+ *		http://www.samsung.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+*/
+
+&pinctrl_1 {
+	hrm_int_pu: hrm-int-pu {
+		samsung,pins = "gpm10-0";
+		samsung,pin-function = <0x0>; /* Input */
+		samsung,pin-pud = <5>; /* 5 : Pull-up(2Kohm)*/
+		samsung,pin-drv = <0>; /* 1x */
+	};
+	hrm_int_pd: hrm-int-pd {
+		samsung,pins = "gpm10-0";
+		samsung,pin-function = <0x0>; /* Input */
+		samsung,pin-pud = <1>; /* Pull-down */
+		samsung,pin-drv = <0>; /* 1x */
+	};
+	hrm_spi1_pd: hrm-spi1-pd {
+		samsung,pins = "gpm11-0";
+		samsung,pin-function = <0x0>; /* Input */
+		samsung,pin-pud = <1>;
+		samsung,pin-drv = <0>; /* 1x */
+	};
+	hrm_spi2_pd: hrm-spi2-pd {
+		samsung,pins = "gpm12-0";
+		samsung,pin-function = <0x0>; /* Input */
+		samsung,pin-pud = <1>;
+		samsung,pin-drv = <0>; /* 1x */
+	};
+	hrm_spi3_pd: hrm-spi3-pd {
+		samsung,pins = "gpm13-0";
+		samsung,pin-function = <0x0>; /* Input */
+		samsung,pin-pud = <1>;
+		samsung,pin-drv = <0>; /* 1x */
+	};
+	hrm_spi4_pd: hrm-spi4-pd {
+		samsung,pins = "gpm14-0";
+		samsung,pin-function = <0x0>; /* Input */
+		samsung,pin-pud = <1>;
+		samsung,pin-drv = <0>; /* 1x */
+	};
+};
+
+&contexthub_0 {
+	chub-irq-pin-len = <4>;
+	chub-irq-pin = <&gpm10 0 0>, <&gpm17 0 0>, <&gpm20 0 0>, <&gpm22 0 0>;
+	pinctrl-names = "hrm_pu","hrm_pd","hrm_spi";
+	pinctrl-0 = <&hrm_int_pu>;
+	pinctrl-1 = <&hrm_int_pd>;
+	pinctrl-2 = <&hrm_spi1_pd &hrm_spi2_pd &hrm_spi3_pd &hrm_spi4_pd>;
+	ssp,hrm_int = <&gpm10 0 0>;	
+	/* SSP Sensor Position */
+	ssp,acc-position = <5>;
+	ssp,mag-position = <2>;
+};
+
+&gpm10 {
+	interrupts = <>;
+	status = "disabled";
+};
+
+&gpm17 {
+	interrupts = <>;
+	status = "disabled";
+};
+
+&gpm20 {
+	interrupts = <>;
+	status = "disabled";
+};
+
+&gpm22 {
+	interrupts = <>;
+	status = "disabled";
+};
